@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <style>
+        .flexbackground {
+            height: 200px;
+            width: 400px;
+            background-color: darkturquoise;
+            margin: 5px;
+            align-items: center
+        }
+        .makeflex {
+            display:flex;
+            justify-content:center;
+            align-items:center
+        }
+        div h2 {
+            margin:20%;
+            text-align: center;
+            position: inherit;
+        }
+    </style>
+</head>
+<div class="jumbotron makeflex">
+    <h1>Store Catalogue</h1>
+</div>
+
+<div class="row makeflex">
+    <div class="col-md-4 flexbackground" >
+        <h2>@Html.ActionLink("Products","Index","Products")</h2>
+    </div>
+    <div class="col-md-4 flexbackground">
+        <h2>@Html.ActionLink("Categories", "Index", "Categories")</h2>
+    </div>
+    <div class="col-md-4 flexbackground">
+        <h2>@Html.ActionLink("Sub Categories", "Index", "SubCategories")</h2>
+    </div>
+</div>
